@@ -1,5 +1,5 @@
 # Demon Slayer 2D Game
-### Descprition
+### Description
 🎮 ___Demon Slayer 2D Game___ is an action platformer based on the anime __Demon Slayer: Kimetsu no Yaiba__.
 Play as the main character Tanjiro and save your kidnapped sister Nezuko from demons.
 
