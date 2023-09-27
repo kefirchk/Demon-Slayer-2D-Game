@@ -22,3 +22,18 @@ acquire new abilities to become stronger and successfully overcome all trials.
  - OS: *Android*
 ---
 ### Mockups
+  ___MAIN MENU:___
+
+![Main Menu](https://github.com/kefirchk/Demon-Slayer-2D-Game/blob/main/docs/Main%20Menu.png)
+
+___OPTIONS:___
+
+![Options](https://github.com/kefirchk/Demon-Slayer-2D-Game/blob/main/docs/Options.png)
+
+___LEVEL CHOICE:___
+
+![Level Choice](https://github.com/kefirchk/Demon-Slayer-2D-Game/blob/main/docs/Level%20Choice.png)
+
+___GAME PROCESS:___
+
+![Game Process](https://github.com/kefirchk/Demon-Slayer-2D-Game/blob/main/docs/Game%20Process.png)
