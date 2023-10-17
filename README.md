@@ -24,16 +24,16 @@ acquire new abilities to become stronger and successfully overcome all trials.
 ### Mockups
   ___MAIN MENU:___
 
-![Main Menu](https://github.com/kefirchk/Demon-Slayer-2D-Game/blob/main/docs/Main%20Menu.png)
+![Main Menu](https://github.com/kefirchk/Demon-Slayer-2D-Game/blob/main/docs/Mockups/Main%20Menu.png)
 
 ___OPTIONS:___
 
-![Options](https://github.com/kefirchk/Demon-Slayer-2D-Game/blob/main/docs/Options.png)
+![Options](https://github.com/kefirchk/Demon-Slayer-2D-Game/blob/main/docs/Mockups/Options.png)
 
 ___LEVEL CHOICE:___
 
-![Level Choice](https://github.com/kefirchk/Demon-Slayer-2D-Game/blob/main/docs/Level%20Choice.png)
+![Level Choice](https://github.com/kefirchk/Demon-Slayer-2D-Game/blob/main/docs/Mockups/Level%20Choice.png)
 
 ___GAME PROCESS:___
 
-![Game Process](https://github.com/kefirchk/Demon-Slayer-2D-Game/blob/main/docs/Game%20Process.png)
+![Game Process](https://github.com/kefirchk/Demon-Slayer-2D-Game/blob/main/docs/Mockups/Game%20Process.png)
