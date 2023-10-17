@@ -1,0 +1,32 @@
+@startuml
+title Activity Diagram "Attack algorithm"
+
+start
+
+:User pressed the "Attack" button;
+
+fork 
+    if (Hero on the ground and an attack flag equals "is recharged"?) then(да)
+        :Set hero state to attack state;
+        :Set the attack flag to active state;
+        :Set the recharging flag to the "is not recharged" state;
+        :Show attack animation;
+        :Wait 0.4 seconds in another thread and set the attack flag to inactive;
+        :Wait 0.5 seconds for another thread and set the recharging flag to the "is recharged" state;
+    endif
+
+fork again
+    :Draw a circle of attack range;
+
+fork again 
+    :Get the boundaries of objects within the attack range;
+    repeat
+        :Get an object by its boundary;
+        :Deal damage to the received object;
+    repeat while (Are all objects not considered?)
+
+end fork
+
+stop
+
+@enduml

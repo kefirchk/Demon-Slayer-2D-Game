@@ -1,0 +1,23 @@
+@startuml
+
+title Diagram of components
+
+
+'skinparam componentStyle uml2
+
+package "Demon Slayer 2D Game" {
+  component Player as player
+  component Controller as controller
+  component Enemy as enemy
+  component Collisions as collisions
+  component Bonuses as bonuses
+  component Background as background
+
+  player -down-> controller : Controls
+  player --> collisions : Colliders
+  player --> bonuses : Collects bonuses
+  player --> background : Interaction
+  enemy --> collisions : Collides with
+}
+
+@enduml

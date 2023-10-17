@@ -1,0 +1,48 @@
+@startuml
+title Diagram of Usecases
+
+left to right direction
+
+actor "User" as User
+usecase "Main menu" as MainMenu
+usecase "Start" as Start
+usecase "Options" as Options
+usecase "Exit" as Exit
+
+User --> MainMenu
+MainMenu --> Start
+MainMenu --> Options
+MainMenu --> Exit
+
+usecase "Level choice" as LevelChoice
+usecase "Play" as Play
+usecase "Pause" as Pause
+usecase "Run" as Run
+usecase "Jump" as Jump
+usecase "Idle" as Idle
+usecase "Attack" as Attack
+
+Start --> LevelChoice
+LevelChoice --> Play
+Play --> Pause
+Pause --> Play
+Pause --> MainMenu
+
+Play --> Run
+Play --> Jump
+Play --> Idle
+Play --> Attack
+
+usecase "Sound" as Sound
+usecase "Music" as Music
+usecase "Difficulty" as Difficulty
+
+Options --> Sound
+Options --> Music
+Options --> Difficulty
+
+Sound --> MainMenu
+Music --> MainMenu
+Difficulty --> MainMenu
+
+@enduml

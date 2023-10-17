@@ -1,0 +1,83 @@
+@startuml
+title Class Diagram
+
+class "Entity" as Entity {
+    + States : enum
+    # lives : int
+    # speed : float
+
+    + GetDamage() : void
+    + Die() : void
+} 
+
+class "CameraController" as CameraController {
+    - player : Transform
+    - pos : Vector3
+
+    - Awake() : void
+    - Update() : void
+}
+
+class "LevelSelector" as LevelSelector {
+    + levels : Button[]
+
+    - Start() : void
+    + Select(numberInBuild: int) : void
+}
+
+class "Obstacle" as Obstacle {
+    - onCollisionEnter2D(collision : Collision2D) : void
+}
+
+class "WalkingMonster" as WalkingMonster {
+    - dir : Vector3
+    - sprite : SpriteRenderer
+
+    - Start() : void
+    - Update() : void
+    - Move() : void
+    - OnCollisionEnter2D(collision : Collision2D) : void
+}
+
+WalkingMonster -u-|> Entity
+
+class "ImmobileMonster" as ImmobileMonster {
+    - Start() : void
+    - OnCollisionEnter2D(collision : Collision2D) : void
+}
+
+ImmobileMonster -u-|> Entity
+
+class "Hero" as Hero {
+    - rigidBody : RigidBody2D
+    - sprite : SpriteRenderer
+    - animator : Animator
+    - jumpForce : float
+    - isGrounded : bool
+    + isAttacking : bool
+    + isRecharged : bool
+    + attackPos : Transform
+    + attackRange : float
+    + enemy : LayerMask
+    + joystick : Joystick
+
+    + Instance() : Hero
+    - Start() : void
+    - Awake() : void
+    + Attack() : void
+    - OnAttack() : void
+    - OndrawGizmosSelected() : void
+    - AttackAnimation() : IEnumarator
+    - AttackCoolDown() : IEnumarator
+    + GetDamage() : void
+    - Run() : void
+    - Jump() : void
+    - CheckGround() : void
+    + State() : States
+    - FixedUpdate() : void
+    - Update() : void
+}
+
+Hero -u-|> Entity
+
+@enduml

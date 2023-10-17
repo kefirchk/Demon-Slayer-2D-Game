@@ -1,0 +1,61 @@
+@startuml
+
+skinparam participantPadding 140
+
+title Diagram of sequences
+
+actor Player as Player
+boundary Game as Game
+entity Character as Character
+participant Platform as Platform
+entity Enemy as Enemy
+
+
+Player -> Game ++: Button "Start"
+Game -> Game: Run level
+Game -> Platform ++: Create objects
+Game -> Character ++: Create character
+
+loop Control character
+    alt Move character along horizontal axis 
+        Player -> Character: Joystick control
+        Character -> Game: Event generation "Run"
+    else Move character along vertical axis
+        Player -> Character: Joystick control
+        Character -> Game: Event generation "Jump"
+        deactivate Platform
+    end
+end
+
+Character -> Platform ++: Platform touch
+Character -> Game: Event generation "Character on platform"
+
+Character -> Character: Move character
+
+Character -> Game: Event generation "Level changing"
+
+Player -> Character: Button "Attack"
+Character -> Game: Event generation "Attack"
+
+Character -> Enemy ++: Collider with enemy
+Enemy -> Character: Enemy deal damage to character
+
+Game -> Game: Collision handling
+
+alt Enemy is killed
+    Game -> Game: Generating the "Enemy Death" event
+    destroy Enemy
+else Персонаж убит
+    Game -> Game: Generating the "Character Death" event
+    destroy Character
+end
+
+alt Game over
+    Game -> Game: Generating the "End of the game" event
+    Game -> Game: Launching the defeat screen
+else Level completed
+    Game -> Game: Generating the "End of Level" event
+    Game -> Game: Launching the victory screen
+end
+
+@enduml

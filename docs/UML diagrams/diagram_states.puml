@@ -1,0 +1,21 @@
+@startuml
+title Сharacter State Diagram
+
+[*] --> Idle : User_start_the_game
+Idle --> Run_left : [Joystick is in\n left position]
+Idle --> Jump : [Joystick is in\n up position]
+Idle --> Run_right : [Joystick is in\n right position]
+Run_left --> Jump : [Joystick is in\n up position]
+Run_right --> Jump : [Joystick is in\n up position]
+Idle --> Attack : ["Attack" button\n pressed]
+Run_left --> Attack : ["Attack" button\n pressed]
+Run_right --> Attack : ["Attack" button\n pressed]
+Jump --> Idle : The hero touched\n the ground
+Attack --> Idle : ["Attack" button\n released]
+Right_right --> [*]
+Right_left --> [*]
+Jump --> [*]
+Attack --> [*]
+Idle --> [*]
+
+@enduml

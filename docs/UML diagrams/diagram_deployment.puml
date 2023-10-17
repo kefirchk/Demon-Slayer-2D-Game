@@ -1,0 +1,25 @@
+@startuml
+
+title Deployment diagram
+
+package "Клиентская платформа" {
+    actor Player as player
+
+    component "Game engine" as gameEngine
+    database "Levels database" as database
+}
+
+package "Game server" {
+    component "Game server" as gameServer
+}
+
+package "Resource storage" {
+    component "Resource storage" as resourceStorage
+}
+
+player --> gameEngine
+gameEngine --> database
+gameEngine --> resourceStorage
+gameEngine --> gameServer
+
+@enduml
